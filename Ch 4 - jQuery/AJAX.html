@@ -1,0 +1,61 @@
+<html>
+
+    <head>
+        
+        <title>AJAX</title>
+        
+<!--        Need to wait for webhosting to try out the actual AJAXyness-->
+        
+        <script type="text/javascript" src="jquery-3.1.1.min.js"></script>
+        
+        
+        <style>
+        
+         
+        </style>
+        
+        
+    
+    </head>
+
+
+    <body>
+        
+        <p id="placedText"></p>
+        
+
+        <script type="text/javascript">
+            
+           $.ajax("info.txt").done(function(data) {
+               
+               $("#placedText").html(data);
+               
+           }).fail(function() {
+              
+               alert("could not get data");
+               
+           });
+            
+        </script>
+        
+    </body>
+    
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

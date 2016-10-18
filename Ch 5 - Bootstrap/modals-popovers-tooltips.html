@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags always come first -->
+    <meta charset="utf-8">
+      
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+      <style>
+       
+    
+        
+          
+      </style>
+    <!-- Bootstrap CSS -->
+      
+      
+      
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.4/css/bootstrap.min.css" integrity="2hfp1SzUoho7/TsGGGDaFdsuuDL0LX2hnUp6VkX3CUQ2K4K+xjboZdsXyp4oUHZj" crossorigin="anonymous">
+    </head>
+    <body>
+        
+        
+        <div class="jumbotron"></div>
+
+        <!-- Modal -->
+          <!-- Button trigger modal -->
+        <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal" data-name="Matthew">
+          Email Matthew
+        </button>
+        
+        <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal" data-name="Taylor">
+          Email Taylor
+        </button>
+        
+        <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal" data-name="<att">
+          Email Matt
+        </button>
+
+        <!-- Modal -->
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+              </div>
+              <div class="modal-body">
+                ...
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+      <button type="button" class="btn btn-lg btn-danger" data-toggle="popover" title="Popover title" data-placement="bottom" data-content="And here's some amazing content. It's very engaging. Right?">Click to toggle popover</button>
+        
+        <button id="myTooltip" type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="bottom" title="Tooltip on bottom">
+        Tooltip!
+        </button>
+        
+    <!-- jQuery first, then Tether, then Bootstrap JS. -->
+        
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js" integrity="sha384-THPy051/pYDQGanwU6poAc/hOdQxjnOEXzbT+OuUAFqNqFjL+4IGLBgCJC3ZOShY" crossorigin="anonymous"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.3.7/js/tether.min.js"></script>
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.2.0/js/tether.min.js" integrity="sha384-Plbmg8JY28KFelvJVai01l8WyZzrYWG825m+cZ0eDDS1f7d/js6ikvy1+X+guPIB" crossorigin="anonymous"></script>
+        
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.4/js/bootstrap.min.js" integrity="VjEeINv9OSwtWFLAtmc4JCtEJXXBub00gtSnszmspDLCtC0I4z4nqz7rEFbIZLLU" crossorigin="anonymous"></script>
+        
+        <script type="text/javascript">
+        
+        $('#myModal').on('show.bs.modal', function (event) {
+              var button = $(event.relatedTarget) 
+              var recipient = button.data('name') 
+              var modal = $(this)
+              modal.find('.modal-title').text('New message to ' + recipient)
+        });
+        
+        $("#myModal").on("hidden.bs.modal", function(event) {
+            
+            
+            alert("modal closed!");
+            
+        });
+        
+        
+            $('[data-toggle="popover"]').popover()
+            
+            $('[data-toggle="tooltip"]').tooltip()
+            
+            $("#myTooltip").on('shown.bs.tooltip', function() {
+                
+                alert("tooltip displayed!")
+                
+            })
+        
+        </script>
+        
+        
+        
+        
+  </body>
+</html>

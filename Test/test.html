@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags always come first -->
+    <meta charset="utf-8">
+      
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+      <style>
+  
+      </style>
+    <!-- Bootstrap CSS -->
+
+    <body>
+    
+            
+        
+     
+        
+        
+    <!-- jQuery first, then Tether, then Bootstrap JS. -->
+    
+        
+        <script type="text/javascript">
+        
+            var arr = [[3, 8], [16, 26], [1, 100]];
+           
+        function getMinimumUniqueSum(arr) {
+    
+        var numberOfElements = arr.length;
+    
+    
+            for (array = 0; array < numberOfElements; array++) {
+
+                var counter = 0;
+
+                for (var i = arr[array][0]; i <= arr[array][1]; i++) {
+                    
+                   for (var x = 1; x <= arr[array][1]; x++) {
+                        
+                        var y = x * x
+
+                        if (y == i) {
+                            
+                            counter++;
+                            ;
+                        }
+
+                    }
+                }
+                
+                console.log(counter);
+
+            }
+
+
+        }
+            
+            
+        getMinimumUniqueSum(arr);
+            
+            
+            /* 
+       */
+       </script>
+        
+        
+        
+        
+        
+  </body>
+</html>
