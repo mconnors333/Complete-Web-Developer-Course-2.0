@@ -1,0 +1,61 @@
+<html>
+
+    <head>
+        
+        <title>AJAX</title>
+        
+        <script type="text/javascript" src="jquery-3.1.1.min.js"></script>
+        
+        
+        <style>
+        
+           
+        </style>
+        
+        
+    
+    </head>
+
+
+    <body>
+        
+        <p></p>
+
+        <script type="text/javascript">
+            
+          
+            $.ajax("info.txt")
+                .done(function(data) {
+                
+                $("p").html(data);
+                
+                })
+                .fail(function() {
+                
+                alert("no data found")
+                
+                });
+            
+        </script>
+        
+    </body>
+    
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
